@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace MagaraGameJam.Abstracts.Movements
 {
-    public interface IFlip
+    public interface IJump
     {
-        void Flip(float direction, float scaleValue);
+        void Jump(float jumpForce);
     }
 }

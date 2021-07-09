@@ -7,5 +7,6 @@ namespace MagaraGameJam.Abstracts.Inputs
     public interface IInputAction
     {
         float Horizontal { get; }
+        bool JumpButtonDown { get; }
     }
 }
