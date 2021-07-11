@@ -6,7 +6,7 @@ using MagaraGameJam.Utilities.Patterns;
 
 namespace MagaraGameJam.Concretes.Managers
 {
-    public class DialogueManager : SingletonMonoBehaviour<DialogueManager>
+    public class DialogueManager : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _textDisplay;
         [SerializeField] private List<string> _sentences;
@@ -14,11 +14,6 @@ namespace MagaraGameJam.Concretes.Managers
         [SerializeField] private GameObject _countinueButton;
 
         private int _index;
-        
-        private void Awake()
-        {
-            SingletonObject(this);
-        }
         
         private void Start()
         {

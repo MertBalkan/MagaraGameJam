@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace MagaraGameJam.Concretes.Combats
 {
-    public class Health : IHealth
+    public class Health : MonoBehaviour, IHealth
     {
         [SerializeField] private int _currentHealth;
         [SerializeField] private int _maxHealth;

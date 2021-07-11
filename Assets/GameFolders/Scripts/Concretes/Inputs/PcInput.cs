@@ -8,6 +8,6 @@ namespace MagaraGameJam.Concretes.Inputs
     public class PcInput : IInputAction
     {
         public float Horizontal => Input.GetAxis("Horizontal");
-        public bool JumpButtonDown => Input.GetButtonDown("Jump");
+        public bool JumpButton => Input.GetButton("Jump");
     }
 }

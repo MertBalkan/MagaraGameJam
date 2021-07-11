@@ -1,3 +1,4 @@
+using MagaraGameJam.Abstracts.Movements;
 using UnityEngine;
 
 namespace MagaraGameJam.Utilities.Controllers
