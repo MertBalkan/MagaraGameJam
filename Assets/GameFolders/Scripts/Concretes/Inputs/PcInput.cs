@@ -9,5 +9,7 @@ namespace MagaraGameJam.Concretes.Inputs
     {
         public float Horizontal => Input.GetAxis("Horizontal");
         public bool JumpButton => Input.GetButton("Jump");
+        public bool InteractButton => Input.GetKeyDown(KeyCode.E);
+        public bool IsLeftButtonClicked => Input.GetMouseButtonDown(0);
     }
 }

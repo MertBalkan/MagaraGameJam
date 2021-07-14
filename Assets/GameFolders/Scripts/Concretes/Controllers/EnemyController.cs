@@ -18,7 +18,9 @@ namespace MagaraGameJam.Concretes.Controllers
 
         private EnemyArmController _armController;
 
-        public float MoveSpeed => throw new System.NotImplementedException();
+        private float _moveSpeed;
+
+        public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
 
         public GameObject Arm => _arm;
 
@@ -31,7 +33,7 @@ namespace MagaraGameJam.Concretes.Controllers
 
         private void Update()
         {
-            _armController.AimToPlayer(_target, _arm);
+            _armController.AimToPlayer(_target, _arm, this);
         }
     }
 }

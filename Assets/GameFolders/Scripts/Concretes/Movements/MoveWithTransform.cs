@@ -29,7 +29,12 @@ namespace MagaraGameJam.Concretes.Movements
 
             if (_onGround.IsOnGround)
             {
+                _entity.MoveSpeed = 3;
                 SoundManager.Instance.FootstepSound();
+                GameManager.Instance.ChangeFootstepSounds();
+            }else
+            {
+                _entity.MoveSpeed = 5;
             }
             
             _entity.transform.Translate(Vector3.right * direction * Time.deltaTime * _entity.MoveSpeed);

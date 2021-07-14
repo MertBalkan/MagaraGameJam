@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using MagaraGameJam.Abstracts.Combats;
+using MagaraGameJam.Concretes.Combats;
 using MagaraGameJam.Concretes.Controllers;
 using MagaraGameJam.Concretes.Managers;
 using UnityEngine;
@@ -14,13 +16,25 @@ namespace MagaraGameJam.Concretes.Spawners
         [SerializeField] private AudioClip _gunFireClip;
         [SerializeField] private BulletController _bullet;
         [SerializeField] private EnemyController _enemy;
+        [SerializeField] private PlayerController _player;
+
+        private float _currentTime;
 
         private void Start()
         {
             SoundManager.Instance.SoundControllers[3].SetClip(_gunFireClip);
-            InvokeRepeating("SpawnBullet", _bulletSpawnTime, _bulletSpawnRate);
         }
 
+        private void Update()
+        {
+            _currentTime += Time.deltaTime;
+
+            if (_currentTime >= _bulletSpawnRate && !_player.GetComponent<Health>().IsDead)
+            {
+                _currentTime = _bulletSpawnRate;
+                SpawnBullet();
+            }
+        }
         public void SpawnBullet()
         {
             SoundManager.Instance.GunFireSound();
@@ -29,6 +43,7 @@ namespace MagaraGameJam.Concretes.Spawners
 
             GameObject bullet = Instantiate(_bullet.gameObject, transform.position, newQua) as GameObject;
             bullet.GetComponent<Rigidbody2D>().velocity = transform.right * _bulletSpeed;
+            _currentTime = 0;
         }
     }
 }

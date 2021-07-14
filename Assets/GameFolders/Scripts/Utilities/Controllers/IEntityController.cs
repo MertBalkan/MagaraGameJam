@@ -6,6 +6,6 @@ namespace MagaraGameJam.Utilities.Controllers
     public interface IEntityController
     {
         Transform transform { get; }
-        float MoveSpeed { get; }
+        float MoveSpeed { get; set; }
     }
 }

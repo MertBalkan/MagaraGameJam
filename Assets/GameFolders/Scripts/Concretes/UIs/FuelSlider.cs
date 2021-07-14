@@ -51,7 +51,6 @@ namespace MagaraGameJam.Concretes.UIs
         {
             if (_onGround.IsOnGround)
             {
-                Debug.Log(_onGround.IsOnGround);
                 StartCoroutine(FuelIncreaseAsync());
             }
         }

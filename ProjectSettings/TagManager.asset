@@ -7,6 +7,21 @@ TagManager:
   - Ground
   - Bullet
   - Wife
+  - PressureBar
+  - Man
+  - Lever
+  - LevelChangeTrigger
+  - Closed
+  - Valve
+  - LevelChangeTrigger2
+  - Supplies
+  - LevelChangeTrigger3
+  - Zepline
+  - PressureBar2
+  - PressureBar3
+  - Man2
+  - Water
+  - Robot
   layers:
   - Default
   - TransparentFX
@@ -16,7 +31,7 @@ TagManager:
   - UI
   - Character
   - Grond
-  - 
+  - FSX
   - 
   - 
   - 

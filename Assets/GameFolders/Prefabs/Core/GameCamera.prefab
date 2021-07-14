@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
+  _smoothSpeed: 5
 --- !u!95 &2098208974
 Animator:
   serializedVersion: 3

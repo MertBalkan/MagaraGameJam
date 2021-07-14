@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using MagaraGameJam.Abstracts.Animations;
 using MagaraGameJam.Abstracts.Combats;
+using MagaraGameJam.Concretes.Animations;
 using MagaraGameJam.Utilities.Controllers;
 using UnityEngine;
 
@@ -25,10 +27,12 @@ namespace MagaraGameJam.Concretes.Combats
             _currentHealth = _maxHealth;
         }
 
-        public void TakeHit(int damage)
+        public void TakeHit(int damage, IAnimation animator)
         {
+            if(IsDead) animator.DieCharacter();
             if(IsDead) return;
             _currentHealth -= damage;
+
         }
     }
 }

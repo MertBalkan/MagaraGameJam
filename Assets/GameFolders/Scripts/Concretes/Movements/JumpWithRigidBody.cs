@@ -31,7 +31,7 @@ namespace MagaraGameJam.Concretes.Movements
         {
             Rigidbody2D rb2D = _entity.transform.GetComponent<Rigidbody2D>();
 
-            if (_input.JumpButton && _fuelController.FuelAmount >= 0)
+            if (_input.JumpButton && _fuelController.FuelAmount > 0)
             {
                 rb2D.AddForce(Vector2.up * Time.deltaTime * jumpForce, ForceMode2D.Impulse);
             }

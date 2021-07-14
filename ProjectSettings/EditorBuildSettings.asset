@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameFolders/Scenes/DemoScene.unity
+    path: Assets/GameFolders/Scenes/MainMenu.unity
+    guid: 77fd92cd5c6000c4fb2b7bc59a0b611a
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/FirstCutScene.unity
+    guid: e52d0d20df055004e869b907ccb492aa
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/ZeplineScene.unity
+    guid: c2efbca75052a334595a092ad55488af
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/PlanetScene.unity
+    guid: 06febd5a2d963394ebdd9d91695352d3
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/BanditScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/NewPlanetScene.unity
+    guid: 7a5763967a7e92f4292bf4d2782e37a6
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/NewZeplineScene.unity
+    guid: ce77163570dc7b44cac0d80a7acacebb
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/SecondCutScene.unity
+    guid: ecdccc5068298244a88993f5384710a5
+  - enabled: 1
+    path: Assets/GameFolders/Scenes/EndScene.unity
+    guid: d81512ee354493648b9390060ceac3d1
   m_configObjects: {}

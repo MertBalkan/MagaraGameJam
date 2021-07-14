@@ -21,5 +21,8 @@ namespace MagaraGameJam.Concretes.Controllers
             if(IsPlaying) return;
             _audioSource.Play();
         }
+        public void StopSound(){
+            _audioSource.Stop();
+        }
     }
 }

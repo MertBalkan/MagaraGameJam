@@ -8,5 +8,7 @@ namespace MagaraGameJam.Abstracts.Inputs
     {
         float Horizontal { get; }
         bool JumpButton { get; }
+        bool InteractButton { get; }
+        bool IsLeftButtonClicked { get; }
     }
 }

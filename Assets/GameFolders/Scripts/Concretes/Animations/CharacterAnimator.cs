@@ -16,6 +16,12 @@ namespace MagaraGameJam.Concretes.Animations
             _entity = entity;
         }
 
+        public void DieCharacter()
+        {
+            Debug.Log("DIEEEEEEE");
+            _entity.transform.GetComponent<Animator>().SetTrigger("die");
+        }
+
         public void FlyCharacter(bool isFlying)
         {
             _entity.transform.GetComponent<Animator>().SetBool("isFlying", isFlying);

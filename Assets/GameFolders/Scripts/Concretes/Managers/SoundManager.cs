@@ -22,24 +22,62 @@ namespace MagaraGameJam.Concretes.Managers
             _soundControllers = GetComponentsInChildren<SoundController>();
         }
 
+        /// <summary>
+        /// Footstep sound.
+        /// </summary>
         public void FootstepSound()
         {
             _canFootstepPlay = true;
             int ranIndex = Random.Range(0, 2);
+            Debug.Log("ranIndex: " + ranIndex);
 
             if (_canFootstepPlay)
             {
                 _soundControllers[ranIndex].PlaySound();
             }
         }
-
+        /// <summary>
+        /// Hit sound.
+        /// </summary>
         public void HitSound()
         {
             _soundControllers[2].PlaySound();
         }
 
-        public void GunFireSound(){
+        /// <summary>
+        /// Guns fire sound.
+        /// </summary>
+        public void GunFireSound()
+        {
             _soundControllers[3].PlaySound();
+        }
+
+        /// <summary>
+        /// Alarm sound.
+        /// </summary>
+        public void AlarmSound()
+        {
+            _soundControllers[4].PlaySound();
+        }
+
+        /// <summary>
+        /// Desert footstep sound.
+        /// </summary>
+        public void DesertFootstepSound()
+        {
+            _soundControllers[5].PlaySound();
+        }
+        
+        /// <summary>
+        /// Mumbling sound.
+        /// </summary>
+        public void MumblingSound()
+        {
+            _soundControllers[6].PlaySound();
+        }
+
+        public void StopSound(){
+            _soundControllers[4].StopSound();
         }
     }
 }

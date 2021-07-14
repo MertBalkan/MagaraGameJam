@@ -8,5 +8,6 @@ namespace MagaraGameJam.Abstracts.Animations
     {
         void MoveCharacter(float direction);
         void FlyCharacter(bool isFlying);
+        void DieCharacter();
     }
 }

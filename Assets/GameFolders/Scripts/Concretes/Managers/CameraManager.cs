@@ -1,18 +1,12 @@
 using MagaraGameJam.Concretes.Controllers;
-using MagaraGameJam.Utilities.Patterns;
 using UnityEngine;
 
 namespace MagaraGameJam.Concretes.Managers
 {
-    public class CameraManager : SingletonMonoBehaviour<CameraManager>
+    public class CameraManager : MonoBehaviour
     {
         [SerializeField] private PlayerController _player;
-
-        private void Awake()
-        {
-            SingletonObject(this);
-            _player = FindObjectOfType<PlayerController>();
-        }
+        [SerializeField] private float _smoothSpeed = 5.0f;
 
         private void Update()
         {
@@ -21,8 +15,11 @@ namespace MagaraGameJam.Concretes.Managers
 
         private void FollowCamera()
         {
-            if(_player != null)
-                this.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, -10);
+            Vector3 targetPos = _player.transform.position + new Vector3(0, 3, -10);
+            Vector3 newPos = Vector3.Lerp(transform.position, targetPos, _smoothSpeed * Time.deltaTime);
+
+            if (_player != null)
+                this.transform.position = newPos;
         }
     }
 }
